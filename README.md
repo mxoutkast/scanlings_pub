@@ -1,6 +1,6 @@
 # Scanlings
 
-Camera-driven creature creator + competitive auto-battler (Supercell-style clarity).
+Camera-driven creature creator + competitive auto-battler.
 
 **Locked stack:** Godot **4.2 LTS** (Android client) + TypeScript (backend on Render).
 
