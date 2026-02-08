@@ -1,0 +1,6 @@
+[config]
+name="ScanlingsCamera"
+binary_type="local"
+# AAR is in the same folder as this gdap: res://android/plugins/
+binary="ScanlingsCamera.aar"
+

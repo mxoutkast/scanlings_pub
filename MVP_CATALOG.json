@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "mvp": {
+    "name": "Scanlings Hackathon MVP",
+    "allowed_archetypes": [
+      "Bulwark Golem",
+      "Cannon Critter",
+      "Sprout Medic",
+      "Zoner Wisp",
+      "Pouncer",
+      "Forge Pup",
+      "Hex Scholar",
+      "Storm Skater"
+    ],
+    "elements": ["Fire", "Water", "Air", "Earth"],
+    "telegraph_cues": [
+      "CUE_TARGET_MARK",
+      "CUE_CHARGE_SHAKE",
+      "CUE_LINE_DASH",
+      "CUE_CONE_BREATH",
+      "CUE_RING_EXPAND",
+      "CUE_DROP_ZONE",
+      "CUE_ARC_SWEEP",
+      "CUE_TWO_BEAT",
+      "CUE_BARRIER_POP",
+      "CUE_HEX_SIGIL",
+      "CUE_MIRROR_FLASH",
+      "CUE_BEACON_PULSE"
+    ],
+    "archetypes": {
+      "Bulwark Golem": {
+        "silhouette_ids": ["bulwark_golem_01", "bulwark_golem_02", "bulwark_golem_03"],
+        "allowed_cues": ["CUE_TARGET_MARK", "CUE_CHARGE_SHAKE", "CUE_ARC_SWEEP", "CUE_BARRIER_POP"],
+        "allowed_passives": ["crate_armor", "guiding_light"]
+      },
+      "Cannon Critter": {
+        "silhouette_ids": ["cannon_critter_01", "cannon_critter_02", "cannon_critter_03"],
+        "allowed_cues": ["CUE_TARGET_MARK", "CUE_ARC_SWEEP", "CUE_DROP_ZONE"],
+        "allowed_passives": ["overclock", "ambush_spring"]
+      },
+      "Sprout Medic": {
+        "silhouette_ids": ["sprout_medic_01", "sprout_medic_02", "sprout_medic_03"],
+        "allowed_cues": ["CUE_BARRIER_POP", "CUE_BEACON_PULSE", "CUE_TARGET_MARK"],
+        "allowed_passives": ["pocket_clinic", "guiding_light"]
+      },
+      "Zoner Wisp": {
+        "silhouette_ids": ["zoner_wisp_01", "zoner_wisp_02", "zoner_wisp_03"],
+        "allowed_cues": ["CUE_CONE_BREATH", "CUE_RING_EXPAND", "CUE_DROP_ZONE"],
+        "allowed_passives": ["mist_curtain"]
+      },
+      "Pouncer": {
+        "silhouette_ids": ["pouncer_01", "pouncer_02", "pouncer_03"],
+        "allowed_cues": ["CUE_LINE_DASH", "CUE_TARGET_MARK", "CUE_TWO_BEAT"],
+        "allowed_passives": ["ambush_spring", "slipstream"]
+      },
+      "Forge Pup": {
+        "silhouette_ids": ["forge_pup_01", "forge_pup_02", "forge_pup_03"],
+        "allowed_cues": ["CUE_TARGET_MARK", "CUE_ARC_SWEEP", "CUE_CHARGE_SHAKE"],
+        "allowed_passives": ["forge_bite", "crate_armor"]
+      },
+      "Hex Scholar": {
+        "silhouette_ids": ["hex_scholar_01", "hex_scholar_02", "hex_scholar_03"],
+        "allowed_cues": ["CUE_HEX_SIGIL", "CUE_TWO_BEAT", "CUE_TARGET_MARK"],
+        "allowed_passives": ["hex_echo", "mist_curtain"]
+      },
+      "Storm Skater": {
+        "silhouette_ids": ["storm_skater_01", "storm_skater_02", "storm_skater_03"],
+        "allowed_cues": ["CUE_LINE_DASH", "CUE_TARGET_MARK", "CUE_TWO_BEAT"],
+        "allowed_passives": ["slipstream", "overclock"]
+      }
+    },
+    "passives": {
+      "crate_armor": {"name": "Crate Armor", "desc": "First time HP < 50%, gain a small shield for 2 turns."},
+      "ambush_spring": {"name": "Ambush Spring", "desc": "First action: next attack deals +20% damage."},
+      "mist_curtain": {"name": "Mist Curtain", "desc": "After using a control move, enemy accuracy -10% for 1 turn."},
+      "pocket_clinic": {"name": "Pocket Clinic", "desc": "Once per battle when HP < 40%, heal 5% max HP."},
+      "overclock": {"name": "Overclock", "desc": "After 2 turns, reduce all cooldowns by 1 once."},
+      "hex_echo": {"name": "Hex Echo", "desc": "When applying a status, 15% chance to extend it by +1 turn (cap)."},
+      "slipstream": {"name": "Slipstream", "desc": "When you miss, gain a speed bump next turn."},
+      "forge_bite": {"name": "Forge Bite", "desc": "On hit, gain small heal-on-hit for 2 turns."},
+      "guiding_light": {"name": "Guiding Light", "desc": "Battle start: gain a small shield."}
+    },
+    "economy": {
+      "scan_charge_cost": 1,
+      "fuse_requires_core": true,
+      "fuse_core_cost": 1,
+      "fuse_essence_cost_min": 200,
+      "charges_as_accelerant": true
+    },
+    "battle": {
+      "team_size_min": 3,
+      "team_size_max": 5,
+      "team_size_recommended": 5
+    },
+    "safety": {
+      "hard_block_faces": true,
+      "negative_prompt_must_include": ["text", "watermark", "writing", "logo"]
+    },
+    "art": {
+      "style": "virtual_vinyl_v1",
+      "mask_version": 1,
+      "mask_size": 512,
+      "mask_requires_ground_plane": true,
+      "image_gen_model": "flux-1-schnell"
+    }
+  }
+}

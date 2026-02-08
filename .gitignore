@@ -1,0 +1,8 @@
+backend/node_modules
+backend/dist
+backend/*.db
+backend/.env
+client/.godot
+client/.import
+client/export
+client/*.apk

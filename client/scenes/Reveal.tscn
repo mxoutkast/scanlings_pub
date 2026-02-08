@@ -1,0 +1,177 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/reveal.gd" id=1]
+
+[node name="Reveal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource(1)
+
+[node name="Root" type="VBoxContainer" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+alignment = 1
+
+[node name="Center" type="CenterContainer" parent="Root"]
+size_flags_vertical = 3
+
+[node name="Card" type="PanelContainer" parent="Root/Center"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 780)
+
+[node name="CardMargin" type="MarginContainer" parent="Root/Center/Card"]
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="CardVBox" type="VBoxContainer" parent="Root/Center/Card/CardMargin"]
+
+[node name="Header" type="HBoxContainer" parent="Root/Center/Card/CardMargin/CardVBox"]
+size_flags_horizontal = 3
+
+[node name="NameBanner" type="PanelContainer" parent="Root/Center/Card/CardMargin/CardVBox/Header"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+
+[node name="NameMargin" type="MarginContainer" parent="Root/Center/Card/CardMargin/CardVBox/Header/NameBanner"]
+theme_override_constants/margin_left = 10
+
+theme_override_constants/margin_right = 10
+
+theme_override_constants/margin_top = 6
+
+theme_override_constants/margin_bottom = 6
+
+[node name="NameLabel" type="Label" parent="Root/Center/Card/CardMargin/CardVBox/Header/NameBanner/NameMargin"]
+unique_name_in_owner = true
+text = "(name)"
+size_flags_horizontal = 3
+
+[node name="RarityPill" type="PanelContainer" parent="Root/Center/Card/CardMargin/CardVBox/Header"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+
+[node name="RarityLabel" type="Label" parent="Root/Center/Card/CardMargin/CardVBox/Header/RarityPill"]
+unique_name_in_owner = true
+horizontal_alignment = 1
+text = "(rarity)"
+
+[node name="ArtFrame" type="PanelContainer" parent="Root/Center/Card/CardMargin/CardVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 520)
+size_flags_horizontal = 3
+
+[node name="Art" type="TextureRect" parent="Root/Center/Card/CardMargin/CardVBox/ArtFrame"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+stretch_mode = 5
+expand_mode = 1
+
+[node name="ArtTopGradient" type="TextureRect" parent="Root/Center/Card/CardMargin/CardVBox/ArtFrame"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_bottom = 120.0
+mouse_filter = 2
+stretch_mode = 5
+expand_mode = 1
+modulate = Color(0, 0, 0, 0.35)
+
+[node name="ArtVignette" type="TextureRect" parent="Root/Center/Card/CardMargin/CardVBox/ArtFrame"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+stretch_mode = 5
+expand_mode = 1
+modulate = Color(0, 0, 0, 0.35)
+
+[node name="RarityGem" type="PanelContainer" parent="Root/Center/Card/CardMargin/CardVBox/Header"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+
+[node name="MetaRow" type="HBoxContainer" parent="Root/Center/Card/CardMargin/CardVBox"]
+
+[node name="ElementPill" type="PanelContainer" parent="Root/Center/Card/CardMargin/CardVBox/MetaRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+
+[node name="ArchetypeLabel" type="Label" parent="Root/Center/Card/CardMargin/CardVBox/MetaRow"]
+unique_name_in_owner = true
+text = "(archetype)"
+size_flags_horizontal = 3
+
+[node name="LoreLabel" type="Label" parent="Root/Center/Card/CardMargin/CardVBox"]
+unique_name_in_owner = true
+text = "(lore)"
+autowrap_mode = 3
+
+[node name="StatsRow" type="HBoxContainer" parent="Root/Center/Card/CardMargin/CardVBox"]
+unique_name_in_owner = true
+
+[node name="HpPill" type="PanelContainer" parent="Root/Center/Card/CardMargin/CardVBox/StatsRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86, 0)
+
+[node name="HpLabel" type="Label" parent="Root/Center/Card/CardMargin/CardVBox/StatsRow/HpPill"]
+unique_name_in_owner = true
+horizontal_alignment = 1
+text = "HP 0"
+
+[node name="AtkPill" type="PanelContainer" parent="Root/Center/Card/CardMargin/CardVBox/StatsRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86, 0)
+
+[node name="AtkLabel" type="Label" parent="Root/Center/Card/CardMargin/CardVBox/StatsRow/AtkPill"]
+unique_name_in_owner = true
+horizontal_alignment = 1
+text = "ATK 0"
+
+[node name="DefPill" type="PanelContainer" parent="Root/Center/Card/CardMargin/CardVBox/StatsRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86, 0)
+
+[node name="DefLabel" type="Label" parent="Root/Center/Card/CardMargin/CardVBox/StatsRow/DefPill"]
+unique_name_in_owner = true
+horizontal_alignment = 1
+text = "DEF 0"
+
+[node name="SpdPill" type="PanelContainer" parent="Root/Center/Card/CardMargin/CardVBox/StatsRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86, 0)
+
+[node name="SpdLabel" type="Label" parent="Root/Center/Card/CardMargin/CardVBox/StatsRow/SpdPill"]
+unique_name_in_owner = true
+horizontal_alignment = 1
+text = "SPD 0"
+
+[node name="ElementLabel" type="Label" parent="Root/Center/Card/CardMargin/CardVBox/MetaRow/ElementPill"]
+unique_name_in_owner = true
+horizontal_alignment = 1
+text = "(element)"
+
+[node name="Divider1" type="HSeparator" parent="Root/Center/Card/CardMargin/CardVBox"]
+
+[node name="Move1Label" type="Label" parent="Root/Center/Card/CardMargin/CardVBox"]
+unique_name_in_owner = true
+text = "(move1)"
+
+[node name="Move2Label" type="Label" parent="Root/Center/Card/CardMargin/CardVBox"]
+unique_name_in_owner = true
+text = "(move2)"
+
+[node name="Spacer" type="Control" parent="Root/Center/Card/CardMargin/CardVBox"]
+size_flags_vertical = 3
+
+[node name="DoneButton" type="Button" parent="Root"]
+unique_name_in_owner = true
+text = "Done"
+size_flags_horizontal = 3

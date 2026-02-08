@@ -1,0 +1,116 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id=1]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource(1)
+
+[node name="Root" type="VBoxContainer" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+alignment = 1
+
+[node name="Center" type="CenterContainer" parent="Root"]
+size_flags_vertical = 3
+
+[node name="Shell" type="PanelContainer" parent="Root/Center"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 780)
+
+[node name="ShellMargin" type="MarginContainer" parent="Root/Center/Shell"]
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="ShellVBox" type="VBoxContainer" parent="Root/Center/Shell/ShellMargin"]
+
+[node name="TitleArea" type="VBoxContainer" parent="Root/Center/Shell/ShellMargin/ShellVBox"]
+alignment = 1
+
+[node name="TitleLogo" type="PanelContainer" parent="Root/Center/Shell/ShellMargin/ShellVBox/TitleArea"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 180)
+
+[node name="TitleLogoPlaceholder" type="Label" parent="Root/Center/Shell/ShellMargin/ShellVBox/TitleArea/TitleLogo"]
+unique_name_in_owner = true
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "SCANLINGS\n(logo placeholder)"
+
+[node name="DividerTop" type="HSeparator" parent="Root/Center/Shell/ShellMargin/ShellVBox"]
+
+[node name="WalletRow" type="HBoxContainer" parent="Root/Center/Shell/ShellMargin/ShellVBox"]
+
+[node name="ChargesLabel" type="Label" parent="Root/Center/Shell/ShellMargin/ShellVBox/WalletRow"]
+unique_name_in_owner = true
+text = "Aether:"
+size_flags_horizontal = 3
+
+[node name="EssenceLabel" type="Label" parent="Root/Center/Shell/ShellMargin/ShellVBox/WalletRow"]
+unique_name_in_owner = true
+text = "Essence:"
+size_flags_horizontal = 3
+
+[node name="CoresLabel" type="Label" parent="Root/Center/Shell/ShellMargin/ShellVBox/WalletRow"]
+unique_name_in_owner = true
+text = "Cores:"
+size_flags_horizontal = 3
+
+[node name="DividerMid" type="HSeparator" parent="Root/Center/Shell/ShellMargin/ShellVBox"]
+
+[node name="Buttons" type="VBoxContainer" parent="Root/Center/Shell/ShellMargin/ShellVBox"]
+unique_name_in_owner = true
+
+[node name="ScanButton" type="Button" parent="Root/Center/Shell/ShellMargin/ShellVBox/Buttons"]
+unique_name_in_owner = true
+text = "Scan"
+custom_minimum_size = Vector2(0, 64)
+
+[node name="BestiaryButton" type="Button" parent="Root/Center/Shell/ShellMargin/ShellVBox/Buttons"]
+unique_name_in_owner = true
+text = "Bestiary"
+custom_minimum_size = Vector2(0, 64)
+
+[node name="TeamButton" type="Button" parent="Root/Center/Shell/ShellMargin/ShellVBox/Buttons"]
+unique_name_in_owner = true
+text = "Team"
+custom_minimum_size = Vector2(0, 64)
+
+[node name="LadderButton" type="Button" parent="Root/Center/Shell/ShellMargin/ShellVBox/Buttons"]
+unique_name_in_owner = true
+text = "Ladder"
+custom_minimum_size = Vector2(0, 64)
+
+[node name="DebugRow" type="HBoxContainer" parent="Root/Center/Shell/ShellMargin/ShellVBox/Buttons"]
+
+[node name="SettingsButton" type="Button" parent="Root/Center/Shell/ShellMargin/ShellVBox/Buttons/DebugRow"]
+unique_name_in_owner = true
+text = "Settings"
+custom_minimum_size = Vector2(0, 52)
+size_flags_horizontal = 3
+
+[node name="DevSpawnButton" type="Button" parent="Root/Center/Shell/ShellMargin/ShellVBox/Buttons/DebugRow"]
+unique_name_in_owner = true
+text = "Dev Spawn"
+custom_minimum_size = Vector2(0, 52)
+size_flags_horizontal = 3
+
+[node name="Spacer" type="Control" parent="Root/Center/Shell/ShellMargin/ShellVBox"]
+size_flags_vertical = 3
+
+[node name="FooterHint" type="Label" parent="Root/Center/Shell/ShellMargin/ShellVBox"]
+unique_name_in_owner = true
+horizontal_alignment = 1
+text = "Prototype UI — art and layout will evolve"
+
+[node name="BottomPad" type="Control" parent="Root"]
+custom_minimum_size = Vector2(0, 8)

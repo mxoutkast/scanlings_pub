@@ -1,0 +1,6 @@
+<godot>
+  <plugin
+    name="ScanlingsCamera"
+    class="com.scanlings.camera.ScanlingsCameraPlugin"
+    singleton="true" />
+</godot>
