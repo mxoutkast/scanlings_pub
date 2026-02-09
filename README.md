@@ -11,6 +11,14 @@ Scanlings is a camera-driven creature collection game that transforms everyday o
 3.  **Battle:** Compete in turn-based, server-simulated auto-battles on the **Ghost Ladder**.
 4.  **Fuse:** Evolve your creatures by scanning a second object, unlocking new passives and rarity tiers.
 
+## Getting Started
+
+### Download the APK
+
+Ready to play? Download the latest Android APK directly from our [Releases page](https://github.com/mxoutkast/scanlings_pub/releases).
+
+No need to build from source—just download, install, and start scanning!
+
 ## Technical Stack
 
 *   **Client:** Godot 4.2 LTS (Android-first)
